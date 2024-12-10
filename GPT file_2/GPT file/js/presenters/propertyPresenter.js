@@ -20,11 +20,13 @@ export class PropertyPresenter {
     }
 
     addProperty(property) {
+        console.log("PropertyPresenter.addPropert");
         this.model.addProperty(property); // Добавляем объект в модель
         this.view.render(this.model.getProperties()); // Обновляем представление
     }
 
     removeProperty(propertyId) {
+        console.log("PropertyPresenter.removeProperty");
         this.model.removeProperty(propertyId); // Удаляем объект по ID
         this.view.render(this.model.getProperties()); // Обновляем представление
     }

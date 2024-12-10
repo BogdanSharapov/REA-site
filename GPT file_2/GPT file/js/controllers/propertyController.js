@@ -2,6 +2,7 @@ import { PropertyModel } from '../models/propertyModel.js';
 import { PropertyView } from '../views/propertyView.js';
 import { ApiService } from '../services/apiService.js';
 
+//Будет отвечать за обращение к БД (к мок). И связывать БД с UI пользователя
 export class PropertyController {
     constructor() {
         this.model = new PropertyModel();

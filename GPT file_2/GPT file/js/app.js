@@ -1,6 +1,7 @@
 import { PropertyPresenter } from './presenters/propertyPresenter.js';
 import { FavoritePresenter } from './presenters/favoritePresenter.js';
 import { PropertyController } from './controllers/propertyController.js';
+import { ApiService } from './services/apiService.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const propertyPresenter = new PropertyPresenter();
@@ -29,7 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
             isFavorite: false
         };
 
-        propertyPresenter.addProperty(newProperty); // Добавление нового объекта
+        ApiService.addProperty(newProperty).then(result => {
+            console.log('Нажали на добавление:', result);
+            propertyPresenter.addProperty(result); // Добавление нового объекта
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+        });
     });
 
     // Обработчик для кнопки поиска
@@ -59,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Обработчик событий для удаления объекта
     document.addEventListener('removeProperty', (event) => {
-        propertyController.removeProperty(event.detail.id);
+        ApiService.removeProperty(event.detail.id).then(result => {
+            console.log('Нажали на удаление:');
+            propertyPresenter.removeProperty(event.detail.id);
+
+        }).catch(error => {
+            console.error('Ошибка:', error);
+        })
     });
 });
