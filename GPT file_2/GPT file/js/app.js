@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const area = document.getElementById('property-area').value;
         const rooms = document.getElementById('property-rooms').value;
         const type = document.getElementById('property-type').value;
+        const imageInput = document.getElementById('property-image'); // Получаем элемент загрузки изображения
+
+        // Валидация площади
+        if (!area || isNaN(area) || area <= 0) {
+            alert("Пожалуйста, введите корректное значение площади (больше 0).");
+            return;
+        }
+
+        // Проверка на наличие файла
+        if (!imageInput.files.length) {
+            alert("Пожалуйста, загрузите изображение.");
+            return;
+        }
+
+        const file = imageInput.files[0]; // Получаем файл
 
         // Создание нового объекта недвижимости
         const newProperty = {
@@ -26,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             area: parseInt(area),
             rooms: parseInt(rooms),
             type,
+            image: URL.createObjectURL(file), // Создание URL для изображения
             isFavorite: false
         };
 

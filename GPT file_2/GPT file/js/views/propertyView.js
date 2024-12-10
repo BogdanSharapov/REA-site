@@ -7,12 +7,17 @@ export class PropertyView {
         this.propertyList.innerHTML = ""; // Очистка перед рендерингом
         properties.forEach(property => {
             const card = document.createElement("div");
-            card.classList.add("property-card");
+            card.classList.add("property-card"); // Добавляем класс для стилизации
+
             card.innerHTML = `
-                <h3>${property.name}</h3>
-                <p>Площадь: ${property.area} кв.м</p>
-                <p>Количество комнат: ${property.rooms}</p>
-                <p>Тип сделки: ${property.type}</p>
+                <img src="${property.image}" alt="Image" style="width: 100%; border-radius: 8px;"/> <!-- Изображение -->
+                <div class="price">$${property.price}</div> <!-- Цена -->
+                <div class="address">${property.address}</div> <!-- Адрес -->
+                <div class="features">
+                    <p>${property.rooms} Bed</p> <!-- Количество спален -->
+                    <p>${property.bathrooms} Bath</p> <!-- Количество ванных комнат -->
+                    <p>${property.area} sqft</p> <!-- Площадь -->
+                </div>
                 <button class="add-to-favorites" data-id="${property.id}">В избранное</button>
                 <button class="remove-property" data-id="${property.id}">Удалить</button>
             `;

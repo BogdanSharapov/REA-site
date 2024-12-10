@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.ibb.co/wr8xBfy/image.jpg');/* Путь к фоновому изображению */
+    background-size: ; /* Изменяет размер изображения, чтобы оно заполнило весь экран */
+    background-position: center; /* Центрирует изображение */
+    color: #333; /* Цвет текста по умолчанию */
+}
+
+header, footer {
+    background-color: rgba(241, 241, 241, 0.9); /* Полупрозрачный фон для шапки и футера */
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    background-color: white; /* Белый фон для основного содержимого */
+    border: 2px solid #ccc; /* Белая рамка вокруг основного тела */
+    border-radius: 12px; /* Закругленные углы настройки */
+    padding: 20px; /* Внутренние отступы */
+    margin: 20px; /* Отступы для отделения от краёв окна */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Лёгкая тень для глубины */
+}
+
+#search-property {
+    padding: 20px; /* Внутренние отступы для секции поиска */
+    margin-bottom: 20px; /* Отступ снизу */
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для выделения */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#property-list {
+    display: grid; /* Использование CSS Grid для создания сетки */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Колонки адаптивного размера */
+    gap: 15px; /* Промежутки между карточками */
+    padding: 10px; /* Внутренние отступы для контейнера */
+}
+
+.property-card, .favorite-card {
+    border-radius: 12px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    background-color: #fff; /* Белый фон */
+    transition: transform 0.3s; /* Плавная анимация при наведении */
+}
+
+.property-card:hover, .favorite-card:hover {
+    transform: translateY(-5px); /* Подъем карточки при наведении */
+}
+
+.price {
+    font-size: 1.5em; /* Размер текста цены */
+    color: #333; /* Цвет текста цены */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.address {
+    color: #777; /* Светлый цвет для адреса */
+}
+
+.features {
+    margin-top: 10px; /* Отступ от верхнего содержимого */
+    font-size: 0.9em; /* Размер шрифта для характеристик */
+    color: #555; /* Цвет для характеристик */
+}
+
+button {
+    background-color: #007bff; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Указатель курсора при наведении */
+    margin-top: auto; /* Автоматический отступ сверху */
+}
+
+button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+/*.logo-banner { display: none; }
+
+.logo {
+  position: relative;
+  background-image: var(--gradient);
+  color: var(--neutral-90);
+  padding-block: 130px 60px;
+  overflow: hidden;
+  isolation: isolate;
+}*/
+

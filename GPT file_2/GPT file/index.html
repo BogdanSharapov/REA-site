@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Агенство недвижимости</title>
 </head>
 <body>
@@ -20,6 +20,7 @@
     </header>
 
     <main>
+        <!--<img src="./css/images/logo.jpg" class="logo-banner">-->
         <!-- Секция добавления нового объекта -->
         <section id="add-property">
             <h2>Добавить новый объект</h2>
@@ -30,6 +31,7 @@
                 <option value="Аренда">Аренда</option>
                 <option value="Продажа">Продажа</option>
             </select>
+            <input type="file" id="property-image" accept="image/*"> <!-- Поле для загрузки изображения -->
             <button id="add-property-button">Добавить</button>
         </section>
 
