@@ -1,0 +1,19 @@
+[
+    {
+        "id": "1",
+        "name": "Квартира в центре",
+        "area": 80,
+        "rooms": 3,
+        "type": "Продажа",
+        "isFavorite": false
+    },
+    {
+        "id": "2",
+        "name": "Студия у моря",
+        "area": 45,
+        "rooms": 1,
+        "type": "Аренда",
+        "isFavorite": true
+    }
+]
+

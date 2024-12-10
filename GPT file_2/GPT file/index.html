@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Агенство недвижимости</title>
+</head>
+<body>
+    <header>
+        <h1>Логотип Агенства</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Добавить объект</a></li>
+                <li><a href="#">Избранное</a></li>
+                <li><a href="#">Поиск</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Секция добавления нового объекта -->
+        <section id="add-property">
+            <h2>Добавить новый объект</h2>
+            <input type="text" id="property-name" placeholder="Название/Описание">
+            <input type="number" id="property-area" placeholder="Площадь (кв.м)">
+            <input type="number" id="property-rooms" placeholder="Количество комнат">
+            <select id="property-type">
+                <option value="Аренда">Аренда</option>
+                <option value="Продажа">Продажа</option>
+            </select>
+            <button id="add-property-button">Добавить</button>
+        </section>
+
+        <!-- Секция поиска объектов -->
+        <section id="search-property">
+            <h2>Поиск объектов</h2>
+            <input type="text" id="search-type" placeholder="Тип сделки">
+            <input type="number" id="search-rooms" placeholder="Комнаты">
+            <input type="number" id="search-area" placeholder="Площадь">
+            <button id="search-button">Поиск</button>
+        </section>
+
+        <!-- Основное содержание для объектов недвижимости -->
+        <section id="property-list"></section>
+
+        <!-- Секция избранных объектов -->
+        <section id="favorites"></section>
+    </main>
+
+    <footer>
+        <p>Контакт: example@example.com</p>
+        <p>© 2023 Агенство недвижимости</p>
+    </footer>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
