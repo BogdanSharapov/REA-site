@@ -2,9 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.ibb.co/wr8xBfy/image.jpg');/* Путь к фоновому изображению */
-    background-size: ; /* Изменяет размер изображения, чтобы оно заполнило весь экран */
-    background-position: center; /* Центрирует изображение */
     color: #333; /* Цвет текста по умолчанию */
 }
 
@@ -78,6 +75,31 @@ h2 {
     margin-top: 10px; /* Отступ от верхнего содержимого */
     font-size: 0.9em; /* Размер шрифта для характеристик */
     color: #555; /* Цвет для характеристик */
+}
+.hat{
+    heigth:100%;
+    //aspect-ratio:9/16;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    background-color: #ffffff;
+    background-image: url("./image/gold-default-logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero{
+    heigth:100%;
+    aspect-ratio:9/16;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    //color: ;
+    background-image: url("./image/town-logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 button {
